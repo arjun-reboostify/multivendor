@@ -5,7 +5,7 @@ import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu'
 import { Button } from '../ui/button'
 import { useTheme } from 'next-themes';
 
-export default function themetoggle() {
+export default function Themetoggle() {
     const { setTheme } = useTheme();
   return (
     <DropdownMenu>

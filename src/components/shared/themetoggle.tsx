@@ -6,7 +6,7 @@ import { Button } from '../ui/button'
 import { useTheme } from 'next-themes';
 
 export default function themetoggle() {
-    const { theme, setTheme } = useTheme();
+    const { setTheme } = useTheme();
   return (
     <DropdownMenu>
         <DropdownMenuTrigger asChild>

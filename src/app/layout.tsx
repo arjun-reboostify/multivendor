@@ -4,7 +4,10 @@ import { Geist, Geist_Mono,Barlow } from "next/font/google";
 //global css
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import {
+  ClerkProvider,
 
+} from '@clerk/nextjs'
 //fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +33,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  return (<ClerkProvider>
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable}${barlowFont.variable} antialiased`}
@@ -43,6 +46,6 @@ export default function RootLayout({
         {children}
         </ThemeProvider>
       </body>
-    </html>
+    </html></ClerkProvider>
   );
 }
